@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DDD - 6Z.BET - 完整增长策略 </title>
+    <title>6Z.BET - 完整增长策略</title>
     <style>
         * {
             margin: 0;
@@ -28,8 +28,8 @@
     position: absolute;
     top: 0;
     left: 0;
-    min-height: 100vh;
     width: 100vw;
+    height: 100vh;
     pointer-events: none;
     z-index: 1;
     padding-top: 60px;     /* Adicione esta linha */
@@ -38,10 +38,10 @@
     padding-right: 40px;   /* Opcional, para espaçamento lateral */
 }
 
-.slide.active {
+        .slide.active {
     opacity: 1;
     transform: translateY(0);
-    position: absolute;   /* Mantém no mesmo fluxo das outras */
+    position: relative;   /* Slide ativo volta ao fluxo normal */
     pointer-events: auto;
     z-index: 2;
 }
@@ -262,6 +262,7 @@
             animation: pulse 2s infinite;
         }
 
+      
 @media (max-width: 900px) {
   .slide {
     padding: 40px 20px 20px 20px !important;
@@ -339,8 +340,12 @@
     padding: 18px 30px !important;
   }
 }
-
-
+/* CSS extra para garantir fundo branco e altura total no slide 4 */
+.slide-4,
+.slide-4 > div {
+    background: #fff !important;
+    min-height: 100vh !important;
+}
     </style>
 </head>
 <body>
@@ -360,7 +365,6 @@
 
     <!-- Slide 1: Opening Impact -->
     <div class="slide slide-1 active">
-<div style="min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center;">
 <h1>巴西全面增长战略</h1>
 <p class="subtitle">战略合作伙伴关系，结合<strong>全国媒体影响力</strong>与<strong>先进数据智能</strong></p>
 <div class="roi-highlight">
@@ -371,7 +375,6 @@
 
     <!-- Slide 2: The Problem -->
     <div class="slide slide-2">
-       <div style="min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center;">
         <h2>你现在错过了什么</h2>
 <div class="metrics-grid">
     <div class="metric-card">
@@ -396,8 +399,6 @@
 
     <!-- Slide 3: Our Solution -->
     <div class="slide slide-3">
-            <div style="min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center;">
-
        <h2>我们的解决方案：完整生态系统</h2>
 <div class="features-grid">
     <div class="feature-card">
@@ -424,7 +425,8 @@
     </div>
 
     <!-- Slide 4: Media Plan Details -->
-<div class="slide slide-4" style="padding: 0; overflow-y: auto; color: #000;">    <div style="width: 100%; overflow: hidden;">
+<div class="slide slide-4" style="padding: 0; overflow-y: auto; background: white; color: #000; min-height: 100vh; width: 100vw;">
+    <div style="width: 100%; min-height: 100vh; background: white; overflow: hidden;">
         <div style="background: linear-gradient(135deg, #FF8B00, #FFE01B); color: #000000; padding: 30px; text-align: center;">
             <h1 style="margin: 0; font-size: 2.5em; font-weight: 300;">6Z.BET年度媒体计划</h1>
             <p style="margin: 10px 0 0 0; opacity: 0.9; font-size: 1.2em;">2025年巴西全方位户外广告活动 | CARACOL MEDIA</p>
@@ -564,7 +566,6 @@
 
     <!-- Slide 5: What We Deliver -->
 <div class="slide slide-5">
-        <div style="min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center;">
     <h2 style="margin-bottom: 80px;">我们的交付</h2>
     <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 80px; max-width: 1000px; text-align: center;">
         <div>
@@ -588,8 +589,6 @@
 
 <div class="slide slide-6">
     <h2 style="margin-bottom: 80px;">实际操作方式</h2>
-        <div style="min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center;">
-
     <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 80px; max-width: 1200px; text-align: left;">
         <div>
             <div style="font-size: 4em; margin-bottom: 20px;">⚡</div>
@@ -616,7 +615,6 @@
 
     <!-- Slide 7: Call to Action -->
  <div class="slide slide-7">
-        <div style="min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center;">
     <h1 style="font-size: 3.5em; margin-bottom: 50px; text-align: center;">战略合作机会</h1>
     <div style="background: linear-gradient(45deg, #B7E101, #FFE01B); color: #000; padding: 30px 60px; border-radius: 20px; font-size: 1.5em; font-weight: bold; margin: 40px 0; text-align: center;">
         完整解决方案：媒体计划 + 数据智能 + 线下策略
