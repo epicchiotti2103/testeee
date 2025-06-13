@@ -265,79 +265,82 @@
       
 @media (max-width: 900px) {
   .slide {
-    padding: 40px 20px 20px 20px !important;
+    padding: 20px 5px 10px 5px !important;
     min-height: 100vh !important;
-    min-height: 100dvh !important;
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: flex-start !important;
-    align-items: center !important;
-    opacity: 0 !important;
-    pointer-events: none !important;
-    position: absolute !important;
-    top: 0 !important;
-    left: 0 !important;
+    display: block !important;
     width: 100vw !important;
-    z-index: 1 !important;
-  }
-  .slide.active {
-    opacity: 1 !important;
-    pointer-events: auto !important;
-    z-index: 2 !important;
+    overflow-y: auto !important;
   }
   .slide > div {
     min-height: auto !important;
     height: auto !important;
     width: 100% !important;
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: flex-start !important;
-    align-items: center !important;
-    padding: 20px 0 !important;
+    padding: 10px 0 !important;
   }
-  h1 { font-size: 2.2em !important; margin-bottom: 20px !important; }
-  h2 { font-size: 1.8em !important; margin-bottom: 30px !important; }
-  h3 { font-size: 1.3em !important; margin-bottom: 15px !important; }
-  .subtitle { font-size: 1.1em !important; margin-bottom: 30px !important; }
-  .roi-highlight { font-size: 1.1em !important; padding: 15px 20px !important; margin: 20px 0 !important; }
+  h1 { font-size: 1.5em !important; margin-bottom: 15px !important; }
+  h2 { font-size: 1.2em !important; margin-bottom: 20px !important; }
+  h3 { font-size: 1em !important; margin-bottom: 10px !important; }
+  .subtitle { font-size: 1em !important; margin-bottom: 15px !important; }
+  .roi-highlight { font-size: 1em !important; padding: 10px 10px !important; margin: 10px 0 !important; }
   .metrics-grid, .features-grid {
     grid-template-columns: 1fr !important;
-    gap: 20px !important;
-    margin: 30px 0 !important;
+    gap: 10px !important;
+    margin: 10px 0 !important;
     width: 100% !important;
+    max-width: 100% !important;
   }
   .metric-card, .feature-card {
-    padding: 25px !important;
+    padding: 15px !important;
   }
+  /* Slide 4 - Cards e grids */
   .slide-4 > div > div[style*="display: flex"] {
     flex-direction: column !important;
-    gap: 15px !important;
+    gap: 10px !important;
     align-items: stretch !important;
   }
   .slide-4 > div > div[style*="display: grid"] {
     grid-template-columns: 1fr !important;
-    gap: 20px !important;
-    margin-bottom: 30px !important;
+    gap: 10px !important;
+    margin-bottom: 10px !important;
   }
   .slide-4 [style*="padding: 25px"] {
-    padding: 20px !important;
+    padding: 10px !important;
   }
   .slide-4 ul li {
-    font-size: 1em !important;
+    font-size: 0.95em !important;
     flex-direction: column !important;
     align-items: flex-start !important;
-    gap: 5px !important;
+    gap: 2px !important;
   }
+  /* Slide 4 - Termos comerciais */
+  .slide-4 > div > div[style*="background: linear-gradient(135deg"] {
+    padding: 10px !important;
+    margin: 10px 0 !important;
+  }
+  .slide-4 > div > div[style*="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr"] {
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+  }
+  /* Slide 5, 6, 7 - Grids */
   .slide-5 > div[style*="display: grid"], 
   .slide-6 > div[style*="display: grid"], 
   .slide-7 > div[style*="display: grid"] {
     grid-template-columns: 1fr !important;
-    gap: 40px !important;
+    gap: 20px !important;
     max-width: 100% !important;
   }
   .cta-button {
-    font-size: 1.2em !important;
-    padding: 18px 30px !important;
+    font-size: 1em !important;
+    padding: 10px 15px !important;
+  }
+  .slide-indicator {
+    top: 10px !important;
+    right: 10px !important;
+    font-size: 1em !important;
+  }
+  .navigation {
+    bottom: 10px !important;
+    gap: 8px !important;
   }
 }
 /* CSS extra para garantir fundo branco e altura total no slide 4 */
